@@ -7,6 +7,8 @@ import { Toaster } from 'react-hot-toast';
 import { Login } from '@/pages/Login';
 import { Dashboard } from '@/pages/Dashboard';
 import { Suppliers } from '@/pages/Suppliers';
+import { Deliveries } from '@/pages/Deliveries';
+import { Loads } from '@/pages/Loads';
 import { Users } from '@/pages/Users';
 import { ChangePassword } from '@/pages/ChangePassword';
 import { NotFound } from '@/pages/NotFound';
@@ -100,6 +102,26 @@ function App() {
             <ProtectedRoute>
               <AppLayout>
                 <Suppliers />
+              </AppLayout>
+            </ProtectedRoute>
+          }
+        />
+        <Route
+          path="/deliveries"
+          element={
+            <ProtectedRoute>
+              <AppLayout>
+                <Deliveries />
+              </AppLayout>
+            </ProtectedRoute>
+          }
+        />
+        <Route
+          path="/loads"
+          element={
+            <ProtectedRoute>
+              <AppLayout>
+                <Loads />
               </AppLayout>
             </ProtectedRoute>
           }
